@@ -1,0 +1,7 @@
+# Material docente: nunca publicar no repositório público.
+# As versões do professor têm as células ao vivo e as soluções dos exercícios.
+notebooks/*_professor.ipynb
+
+# Python / Jupyter
+.ipynb_checkpoints/
+__pycache__/

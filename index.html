@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Learning — UFMT</title>
+<link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+<div class="pagina">
+
+  <header>
+    <p class="corrente"><span>Deep Learning</span><span>Engenharia Elétrica</span></p>
+    <h1>Deep Learning</h1>
+    <p class="subtitulo">Notas de aula em notebooks, do bigrama ao transformer</p>
+    <p class="filiacao"><span>Instituto de Engenharia — UFMT</span><span>Raoni F. S. Teixeira</span></p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Identificação</h2>
+
+      <p class="margem">O fio condutor do curso são os grandes modelos de linguagem:
+      eles abrem a primeira aula e fecham a última.</p>
+
+      <div class="objetivos">
+        <span class="rotulo">Ideia central</span>
+        <p style="margin:0">Uma rede profunda aprende, automaticamente, transformações
+        que levam os dados a um espaço latente onde o problema fica mais simples.
+        O curso constrói essa ideia do zero: da regressão linear e do modelo de
+        bigramas até um pequeno transformer.</p>
+      </div>
+
+      <dl class="ident">
+        <dt>Professor</dt>
+        <dd>Raoni F. S. Teixeira</dd>
+        <dt>Público</dt>
+        <dd>Engenharia Elétrica</dd>
+        <dt>Duração</dt>
+        <dd>7 semanas, um encontro semanal de 2h30 a 3h</dd>
+        <dt>Horário</dt>
+        <dd class="discreto">A definir.</dd>
+        <dt>Contato</dt>
+        <dd><a href="mailto:raoni.teixeira@ufmt.br">raoni.teixeira@ufmt.br</a></dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Como funcionam as aulas</h2>
+
+      <p>Não há slides. Cada aula é uma nota de aula em forma de notebook do
+      Google Colab: texto corrido com código entremeado. As células marcadas com
+      <code># AO VIVO</code> chegam vazias e são escritas durante o encontro;
+      acompanhe digitando junto. Leia o texto em volta delas como a explicação
+      do que estamos fazendo e por quê.</p>
+
+      <p>Toda aula tem pelo menos um exercício, feito em parte no papel e em parte
+      no notebook, e termina com uma pergunta para a semana seguinte.</p>
+
+      <p class="passagem">
+        <span class="rotulo">Para começar</span>
+        Basta uma conta Google. Abra o notebook pelo link “Abrir no Colab” e use
+        <em>Arquivo → Salvar uma cópia no Drive</em> antes de escrever, para não
+        perder o que você digitou.
+      </p>
+    </section>
+
+    <section>
+      <h2>Livro-texto</h2>
+
+      <p>Simon J. D. Prince. <em>Understanding Deep Learning</em>. MIT Press, 2023.
+      O PDF é gratuito na página do livro.</p>
+
+      <ol class="lista lista--larga">
+        <li><span class="cod">Livro</span><span class="item"><a class="ext" href="https://udlbook.github.io/udlbook/" target="_blank" rel="noopener">PDF gratuito e figuras</a></span></li>
+        <li><span class="cod">Notebooks</span><span class="item"><a class="ext" href="https://github.com/udlbook/udlbook" target="_blank" rel="noopener">Notebooks oficiais por capítulo</a></span></li>
+        <li><span class="cod">Errata</span><span class="item"><a class="ext" href="https://github.com/udlbook/udlbook/issues" target="_blank" rel="noopener">Errata e comentários</a></span></li>
+        <li><span class="cod">Colab</span><span class="item"><a class="ext" href="https://colab.research.google.com" target="_blank" rel="noopener">Google Colab</a></span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Cronograma</h2>
+
+      <ol class="lista">
+        <li>
+          <span class="cod">Sem. 1</span>
+          <span class="item">
+            <span class="titulo">O que significa uma máquina aprender?</span>
+            <span class="glosa">Caps. 1 e 2. Tipos de aprendizado no pipeline de um LLM;
+            predição do próximo token como classificação; espaço latente; regressão linear
+            e gradiente descendente.</span>
+            <span class="glosa">Ao vivo: bigramas em <em>Dom Casmurro</em>, analogias GloVe,
+            calibração de sensor. Exercício: problemas 2.1 e 2.2.</span>
+            <span class="acoes">
+              <a class="ext" href="https://colab.research.google.com/github/raoni-teixeira/deep/blob/main/notebooks/aula01_alunos.ipynb" target="_blank" rel="noopener">Abrir no Colab</a>
+              <a class="baixar" href="./notebooks/aula01_alunos.ipynb" download>Baixar .ipynb</a>
+            </span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 2</span>
+          <span class="item">
+            <span class="titulo">Redes neurais rasas</span>
+            <span class="glosa">Cap. 3. A rede rasa como soma de funções lineares por partes;
+            unidades ocultas e regiões lineares; aproximação universal. Abre com o
+            problema 2.3 (regressão generativa × discriminativa).</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 3</span>
+          <span class="item">
+            <span class="titulo">Redes neurais profundas</span>
+            <span class="glosa">Cap. 4. Composição de redes como “dobra” do espaço de entrada;
+            profundidade × largura; notação matricial e PyTorch.</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 4</span>
+          <span class="item">
+            <span class="titulo">Funções de perda</span>
+            <span class="glosa">Cap. 5. Máxima verossimilhança; erro quadrático como caso
+            gaussiano; entropia cruzada e a log-verossimilhança negativa dos bigramas
+            da semana 1.</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 5</span>
+          <span class="item">
+            <span class="titulo">Ajuste de modelos</span>
+            <span class="glosa">Cap. 6. Gradiente descendente, SGD, momento e Adam;
+            retropropagação no grafo computacional; inicialização; <code>autograd</code> e GPU.</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 6</span>
+          <span class="item">
+            <span class="titulo">Desempenho e regularização</span>
+            <span class="glosa">Caps. 8 e 9. Treino, validação e teste; viés, variância e
+            <em>double descent</em>; L2, <em>early stopping</em>, <em>dropout</em> e aumento de dados.</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+        <li>
+          <span class="cod">Sem. 7</span>
+          <span class="item">
+            <span class="titulo">Transformers</span> <span class="discreto">(tema a confirmar)</span>
+            <span class="glosa">Cap. 12. Atenção e o transformer decodificador; um mini-GPT
+            de caracteres em <em>Dom Casmurro</em>, comparado ao modelo de bigramas da semana 1.</span>
+            <span class="acoes"><span class="vazio">Notebook em breve.</span></span>
+          </span>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Avaliação</h2>
+      <p class="discreto">A definir.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Raoni F. S. Teixeira</span>
+    <span>Instituto de Engenharia — UFMT</span>
+  </footer>
+
+</div>
+</body>
+</html>
